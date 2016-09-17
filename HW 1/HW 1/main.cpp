@@ -128,7 +128,40 @@ void ex03()
 
 void ex04()
 {
+    // Part a
+    int number;
+    do
+    {
+        cout << "Enter a number between 1 and 10: ";
+        cin >> number;
+    }
+    while (number < 1 || number > 10);
     
+    // Part b
+    
+    
+    // Part c
+    do
+    {
+        cout << "* ";
+        number--;
+    }
+    while (number > 0);
+    
+    // Part d
+    int evenNumber;
+    for (evenNumber = 1; evenNumber % 2 == 0; evenNumber++)
+    {
+        cout << evenNumber;
+    }
+
+    // Part e
+    
+    
+    // Part f
+    
+    
+    // Part g
     
 }
 
