@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+#include <string>
 using namespace std;
 
 void ex02();
@@ -89,7 +91,39 @@ void ex02()
 
 void ex03()
 {
+    // Part a
+    // Have user input area of a square
+    cout << "Enter the area of a square: ";
+    double area;
+    cin >> area;
+    double diagonal;
+    diagonal = sqrt(area);
+    // Output length of diagonal
+    cout << "The length of the diagonal is " << diagonal << endl;
     
+    // Part b
+    // Have user enter y/n and output yes/no
+    char ch;
+    cout << "Enter 'y' for yes and 'n' for no: ";
+    cin >> ch;
+    if (ch == 'y')
+        cout << "yes" << endl;
+    else
+        cout << "no" << endl;
+    // Part c
+    char tab;
+    
+    // Part d
+    // Prompt user for mailing address
+    string mailingAddress;
+    cout << "Enter your mailing address: ";
+    getline(cin, mailingAddress);
+    cout << "Your mailing address is: " << mailingAddress << endl;
+    
+    // Part e
+    // Initialize string variable to empty string
+    string homework;
+
 }
 
 void ex04()
