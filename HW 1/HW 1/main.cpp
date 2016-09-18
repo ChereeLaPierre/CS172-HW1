@@ -108,17 +108,21 @@ void ex03()
     cin >> ch;
     if (ch == 'y')
         cout << "yes" << endl;
-    else
+    else if (ch == 'n')
         cout << "no" << endl;
+    else
+        cout << "Enter a valid letter." << endl;
+    
+    
     // Part c
     char tab;
     
     // Part d
     // Prompt user for mailing address
-    string mailingAddress;
     cout << "Enter your mailing address: ";
+    string mailingAddress;
     getline(cin, mailingAddress);
-    cout << "Your mailing address is: " << mailingAddress << endl;
+    cout << "Your mailing address is " << mailingAddress << endl;
     
     // Part e
     // Initialize string variable to empty string
@@ -167,7 +171,31 @@ void ex04()
 
 void ex05()
 {
+    // Part a
+    // Prompt user to input 5 integers and store them in an array
+    const int NUMBER_OF_INTEGERS = 5;
+    double box[NUMBER_OF_INTEGERS];
+    for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+    {
+        cout << "Enter a number: ";
+        cin >> box[i];
+    }
     
+    // Part b
+    // Calculate sum
+    double sum = 0;
+    for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+    {
+        sum += box[i];
+    }
+    cout << "The sum for all of the integers is " << sum << endl;
+    // Calculate product
+    double product = 1;
+    for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+    {
+        product *= box[i];
+    }
+    cout << "The product of all of the integers is " << product << endl;
 }
 
 
