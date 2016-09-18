@@ -8,6 +8,13 @@ void ex03();
 void ex04();
 void ex05();
 
+const int NUMBER_OF_INTEGERS = 5;
+double box[NUMBER_OF_INTEGERS];
+
+void arrayOne(int list[], int arraySize);
+int arrayTwo();
+
+
 int main()
 {
     // 1 a
@@ -173,9 +180,7 @@ void ex05()
 {
     // Part a
     // Prompt user to input 5 integers and store them in an array
-    const int NUMBER_OF_INTEGERS = 5;
-    double box[NUMBER_OF_INTEGERS];
-    for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+        for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
     {
         cout << "Enter a number: ";
         cin >> box[i];
@@ -196,9 +201,21 @@ void ex05()
         product *= box[i];
     }
     cout << "The product of all of the integers is " << product << endl;
+    
+    // Part c
+    arrayOne(box, 5);
+    
+    
 }
 
-
+void arrayOne(int list[], int arraySize)
+{
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << list[i] << " ";
+    }
+    
+}
 
 
 
