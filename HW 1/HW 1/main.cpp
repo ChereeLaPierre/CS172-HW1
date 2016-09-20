@@ -10,9 +10,6 @@ void ex05();
 void doubleInteger();
 void add(int a, int b);
 
-const int NUMBER_OF_INTEGERS = 5;
-double box[NUMBER_OF_INTEGERS];
-
 void arrayOne(int list[], int arraySize);
 int arrayTwo();
 int number;
@@ -191,9 +188,11 @@ void ex04()
 
 void ex05()
 {
+    double box[5];
+
     // Part a
     // Prompt user to input 5 integers and store them in an array
-        for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+        for (int i = 0; i < 5; i++)
     {
         cout << "Enter a number: ";
         cin >> box[i];
@@ -202,20 +201,21 @@ void ex05()
     // Part b
     // Calculate sum
     double sum = 0;
-    for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+    for (int i = 0; i < 5; i++)
     {
         sum += box[i];
     }
     cout << "The sum for all of the integers is " << sum << endl;
     // Calculate product
     double product = 1;
-    for (int i = 0; i < NUMBER_OF_INTEGERS; i++)
+    for (int i = 0; i < 5; i++)
     {
         product *= box[i];
     }
     cout << "The product of all of the integers is " << product << endl;
     
     // Part c
+    arrayOne(box, 5);
     
     
     // Part d
@@ -226,7 +226,7 @@ void ex05()
 
 void arrayOne(int list[], int arraySize)
 {
-    for (int i = 0; i < arraySize; i++)
+    for (int i = 0; i <= arraySize; i++)
     {
         cout << list[i] << " ";
     }
