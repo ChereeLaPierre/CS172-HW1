@@ -7,24 +7,24 @@ void ex02();
 void ex03();
 void ex04();
 void ex05();
+void doubleInteger();
+void add(int a, int b);
 
 const int NUMBER_OF_INTEGERS = 5;
 double box[NUMBER_OF_INTEGERS];
 
 void arrayOne(int list[], int arraySize);
 int arrayTwo();
-
+int number;
 
 int main()
 {
-    // 1 a
     ex02();
     ex03();
     ex04();
     ex05();
     
     return 0;
-    
 }
 
 void ex02()
@@ -34,7 +34,7 @@ void ex02()
     bool hasPassedTest = true;
     
     // Part b
-    // Output greater number
+    // Generate random number for x and y
     int x = rand() % 1000;
     int y = rand() % 1000;
     cout << "x equals " << x << " and y equals " << y << endl;
@@ -53,7 +53,7 @@ void ex02()
     }
     
     // Part c
-    // Declare variable and output whether if is less than 100 or not
+    // Declare variable and output whether it is less than 100 or not
     int numberOfShares;
     cout << "Enter a value: ";
     cin >> numberOfShares;
@@ -84,8 +84,7 @@ void ex02()
     cout << "Enter the outside temperature: ";
     int outsideTemp;
     cin >> outsideTemp;
-    
-    // Decrease shelf life by 4 if temperature is over 90
+    // Decrease shelf life by 4 if temperature is over 90 degrees
     if (outsideTemp  > 90)
     {
         shelfLife = shelfLife - 4;
@@ -99,7 +98,7 @@ void ex02()
 void ex03()
 {
     // Part a
-    // Have user input area of a square
+    // Have user input the area of a square
     cout << "Enter the area of a square: ";
     double area;
     cin >> area;
@@ -111,18 +110,16 @@ void ex03()
     // Part b
     // Have user enter y/n and output yes/no
     char ch;
-    cout << "Enter 'y' for yes and 'n' for no: ";
+    cout << "Do you want to continue? (y/n)";
     cin >> ch;
     if (ch == 'y')
         cout << "yes" << endl;
-    else if (ch == 'n')
-        cout << "no" << endl;
     else
-        cout << "Enter a valid letter." << endl;
+        cout << "no" << endl;
     
     
     // Part c
-    char tab;
+    char tab = '\t';
     
     // Part d
     // Prompt user for mailing address
@@ -140,37 +137,53 @@ void ex03()
 void ex04()
 {
     // Part a
-    int number;
+    // Have user input a number between 1 and 10
+    // Loop until the input is valid
     do
     {
         cout << "Enter a number between 1 and 10: ";
         cin >> number;
     }
-    while (number < 1 || number > 10);
+    while (number < 1 && number > 10);
     
     // Part b
-    
+    // Output the sum of the cubes from 1 to the number the user gave
+    double sum;
+    for (int i = 1; i <= number; i++)
+    {
+        sum += pow(i, 3);
+    }
+    cout << "The sum of the cubes from 1 to " << number << " is " << sum << endl;
     
     // Part c
+    // Output x number of astrisks
     do
     {
         cout << "* ";
         number--;
     }
     while (number > 0);
+    cout << endl;
     
     // Part d
-    int evenNumber;
-    for (evenNumber = 1; evenNumber % 2 == 0; evenNumber++)
+    // Output even numbers from 1 to 40
+    for (int evenNumber = 1; evenNumber <= 40; evenNumber++)
     {
-        cout << evenNumber;
+        evenNumber = evenNumber + 1;
+        cout << evenNumber << " ";
     }
-
-    // Part e
+    cout << endl;
     
+    // Part e
+    doubleInteger();
+    cout << endl;
     
     // Part f
-    
+    cout << "Enter two numbers: ";
+    int number1, number2;
+    cin >> number1;
+    cin >> number2;
+    add(number1, number2);
     
     // Part g
     
@@ -203,7 +216,10 @@ void ex05()
     cout << "The product of all of the integers is " << product << endl;
     
     // Part c
-    arrayOne(box, 5);
+    
+    
+    // Part d
+    
     
     
 }
@@ -217,5 +233,16 @@ void arrayOne(int list[], int arraySize)
     
 }
 
+void doubleInteger()
+{
+    number = number * 2;
+    cout << "The number doubled is " << number;
+}
+
+void add(int a, int b)
+{
+    int sum = a + b;
+    cout << "The sum of " << a << " and " << b << " is " << sum << endl;
+}
 
 
