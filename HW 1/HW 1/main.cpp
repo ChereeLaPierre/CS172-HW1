@@ -9,7 +9,7 @@ void ex04();
 void ex05();
 void doubleInteger();
 void add(int a, int b);
-
+void increment(int& n);
 void arrayOne(int list[], int arraySize);
 int arrayTwo();
 int number;
@@ -120,8 +120,9 @@ void ex03()
     
     // Part d
     // Prompt user for mailing address
-    cout << "Enter your mailing address: ";
     string mailingAddress;
+    cout << "Enter your mailing address: ";
+    cin.ignore();
     getline(cin, mailingAddress);
     cout << "Your mailing address is " << mailingAddress << endl;
     
@@ -183,6 +184,8 @@ void ex04()
     add(number1, number2);
     
     // Part g
+    increment(number);
+    cout << "The new number is " << number << endl;
     
 }
 
@@ -215,13 +218,18 @@ void ex05()
     cout << "The product of all of the integers is " << product << endl;
     
     // Part c
-    arrayOne(box, 5);
+    arrayOne(box);
     
     
     // Part d
     
     
     
+}
+
+void increment(int& n)
+{
+    n++;
 }
 
 void arrayOne(int list[], int arraySize)
