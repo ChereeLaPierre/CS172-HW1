@@ -218,7 +218,7 @@ void ex05()
     cout << "The product of all of the integers is " << product << endl;
     
     // Part c
-    arrayOne(box);
+    
     
     
     // Part d
